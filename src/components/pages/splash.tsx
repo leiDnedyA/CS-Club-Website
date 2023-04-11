@@ -3,7 +3,7 @@ import MatrixCanvas from './matrix-canvas';
 import Logo from "./umb.png";
 import Image from 'next/image';
 import useEventListener from '@/hooks/useEventListener';
-import GlitchText from '../components/glitch-text';
+import GlitchText from '../glitch-text';
 
 function NavBar({ scroll }: { scroll: number }) {
     return (
@@ -12,13 +12,13 @@ function NavBar({ scroll }: { scroll: number }) {
                 if (index != 0) {
                     return (
                         <>
-                        <div className='w-1 h-1 mt-1 bg-white rounded-full' />
-                        <div className=' flex items-center hover:text-primary-500 hover:underline text-white transition-colors'>{item}</div>
+                        <div key={`abc-${index}`} className='w-1 h-1 mt-1 bg-white rounded-full' />
+                        <div key={`cba-${index}`} className=' flex items-center hover:text-primary-500 hover:underline text-white transition-colors'>{item}</div>
                         </>
                     )
                 } else {
                     return (
-                        <div className=' flex items-center hover:text-primary-500 hover:underline text-white transition-colors'>{item}</div>
+                        <div key={`bca-${index}`} className=' flex items-center hover:text-primary-500 hover:underline text-white transition-colors'>{item}</div>
                     )
                 }
             })}
@@ -62,12 +62,12 @@ export default function Splash() {
                     alt="UMass Boston Logo"
                     />
                     <div className='relative'>
-                        <GlitchText className=" bg-transparent text-secondary-200 text-8xl font-bold">CS CLUB</GlitchText>
+                        <GlitchText className=" bg-transparent text-secondary-200 text-8xl font-bold">{"CS CLUB"}</GlitchText>
                     </div>
                     
                 </span>
                 
-                <p className='text-xl text-secondary-100 px-2 py-2'>UMass Boston's official center for technology-driven students.</p>
+                <p className='text-xl text-secondary-100 px-2 py-2'>{"UMass Boston's official center for technology-driven students."}</p>
             </div>
             
         </div>

@@ -1,11 +1,11 @@
-import GenericParagraph from "../components/generic-paragraph";
-import ImageCarousel from "../components/image-carousel";
+import GenericParagraph from "../generic-paragraph";
+import ImageCarousel from "../image-carousel";
 import Image0 from '../images/mm_food.jpg';
 import Image1 from '../images/good_kid_maad_city.jpg';
 import Image2 from '../images/good_kid_maad_city_deluxe.jpg';
 import Image3 from '../images/good_kid_maad_city_deluxe_2.png';
 import Image4 from '../images/ambitionz_az_a_ridah.jpg';
-import GlitchText from "../components/glitch-text";
+import GlitchText from "../glitch-text";
 
 export default function About() {
     return (
@@ -17,7 +17,7 @@ export default function About() {
               </GenericParagraph>
               <br />
               <GenericParagraph className='text-secondary-200 text-lg'>
-              On this section of the webpage, you can find information about our upcoming events, meetings, and workshops. We also provide resources for members, such as coding tutorials, job and internship postings, and information about industry trends. If you're interested in joining our club or attending one of our events, please feel free to reach out to us through the contact information provided. We look forward to meeting you and sharing our passion for computer science!
+              {"On this section of the webpage, you can find information about our upcoming events, meetings, and workshops. We also provide resources for members, such as coding tutorials, job and internship postings, and information about industry trends. If you're interested in joining our club or attending one of our events, please feel free to reach out to us through the contact information provided. We look forward to meeting you and sharing our passion for computer science!"}
               </GenericParagraph>
             </div>
             <div className="w-full h-full flex justify-center ">
@@ -25,8 +25,7 @@ export default function About() {
             className={"flex-grow max-w-[150px] mt-[70px]"} 
             items={[Image0, Image1, Image2, Image3, Image4]} 
             scale={10} 
-            offsetY={30}
-            />
+            offsetY={30} />
             </div>
         </div>
     )

@@ -2,7 +2,7 @@ import { FC, useState , useRef , useEffect , useContext } from "react";
 import EventListing from "./generic-event-types";
 import "./module.event-deck.css";
 import { useAutoAnimate } from '@formkit/auto-animate/react';
-import UserContext from "../context/user-context";
+import UserContext from "../app/context/user-context";
 import CALENDAR_ICON from "./../../../public/images/calendar.png";
 
 interface EventDeckProps {

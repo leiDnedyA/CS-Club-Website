@@ -1,7 +1,7 @@
 import React, { useRef , useEffect, ForwardedRef } from "react";
 import useEventListener from "@/hooks/useEventListener";
 import useForwardRef from "@/hooks/useForwardRef";
-import GlitchText from "./glitch-text";
+import GlitchText from "../../src/components/glitch-text";
 
 const GenericSection = React.forwardRef(({ children , title }: { children?: JSX.Element[] | JSX.Element, title: string }, ref: ForwardedRef<HTMLHeadingElement>) => {
     const thisElementRef = useForwardRef<HTMLHeadingElement>(ref);
@@ -48,5 +48,7 @@ const GenericSection = React.forwardRef(({ children , title }: { children?: JSX.
         </>
     )
 })
+
+GenericSection.displayName = "GenericSection";
 
 export default GenericSection;

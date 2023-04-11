@@ -51,4 +51,6 @@ const GenericSubsection = React.forwardRef(({ children , title }: { children?: J
     )
 })
 
+GenericSubsection.displayName = "GenericSubsection";
+
 export default GenericSubsection;

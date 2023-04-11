@@ -1,5 +1,5 @@
 import { FC , useEffect, useRef , useState , useContext } from "react";
-import EventDeck from "../components/event-deck";
+import EventDeck from "../event-deck";
 
 interface EventListing {
     title: string;

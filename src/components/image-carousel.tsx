@@ -4,7 +4,7 @@ import { StaticImageData } from 'next/image';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 import useEventListener from '@/hooks/useEventListener';
 
-import "../globals.css";
+import "../app/global.css";
 import { FC } from 'react';
 import Carousel from './carousel-types';
 import GlitchText from './glitch-text';
@@ -35,7 +35,7 @@ const ImageCarousel: FC<Carousel<StaticImageData[]>> = ({ className, items , sca
                 return (
                     <li ref={itemRef} key={image.src} className={`w-full h-full`}>
                         <div style={{transform: `translateY(${offsetY * index}px) scale(${scale + index * 0.8})`, animationDelay: `${duration - animationDuration + 30}ms`, animationDuration: `${animationDuration}ms`, animationTimingFunction: "ease-in-out"}} className={`w-full h-auto shadow-md rounded-md  ${index == 0 ? `fade-out opacity-1` : index == (imageItems.length - 1) ? `fade-in opacity-0` : "transition-all"}`}>
-                            <GlitchText><img src={image.src} alt={image.src} className={`rounded-[0.5px]`} /></GlitchText>
+                            <img src={image.src} alt={image.src} className={`rounded-[0.5px]`} />
                         </div>
                     </li>
                 )

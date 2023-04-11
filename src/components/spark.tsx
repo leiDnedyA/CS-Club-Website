@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useRef, useEffect } from 'react';
 
 const Spark = ({ width, height, color }) => {
@@ -5,9 +6,9 @@ const Spark = ({ width, height, color }) => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas?.getContext('2d');
 
-    const sparks = [];
+    const sparks: any = [];
 
     const createSpark = (x, y) => {
       const spark = {
